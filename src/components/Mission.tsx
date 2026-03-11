@@ -22,15 +22,15 @@ const Mission = () => {
   ];
 
   return (
-    <section id="misja" className="py-24 bg-broken-white overflow-hidden relative">
+    <section id="misja" className="py-24 bg-brand-bg overflow-hidden relative">
       {/* Decorative circle */}
-      <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-96 h-96 bg-warm-beige rounded-full blur-3xl opacity-50" />
+      <div className="absolute -right-24 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <div className="relative">
-              <div className="rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
                 <img
                   src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop"
                   alt="Zespół biura rachunkowego"
@@ -39,9 +39,9 @@ const Mission = () => {
                 />
               </div>
               {/* Overlay badge */}
-              <div className="absolute -top-6 -right-6 bg-soft-orange text-white p-8 rounded-3xl shadow-xl">
+              <div className="absolute -top-6 -right-6 bg-brand-primary text-white p-8 rounded-xl shadow-xl">
                 <p className="text-4xl font-serif font-bold">100%</p>
-                <p className="text-xs font-bold uppercase tracking-widest">Zaangażowania</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest">Zaangażowania</p>
               </div>
             </div>
           </div>
@@ -49,9 +49,9 @@ const Mission = () => {
           <div className="order-1 lg:order-2">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-advisor-dark mb-8">
               Nasza misja: <br />
-              <span className="italic text-muted-orange">Spokój Twojej firmy</span>
+              <span className="italic text-brand-blue">Spokój Twojej firmy</span>
             </h2>
-            <p className="text-lg text-advisor-dark/70 mb-10 leading-relaxed">
+            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
               Wierzymy, że księgowość powinna być wsparciem, a nie ciężarem. Naszym celem jest zapewnienie Ci maksymalnego bezpieczeństwa, abyś mógł skupić się na tym, co robisz najlepiej – rozwijaniu swojego biznesu.
             </p>
 
@@ -65,12 +65,12 @@ const Mission = () => {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start space-x-6"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-warm-beige flex items-center justify-center text-soft-orange flex-shrink-0">
+                  <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center text-brand-primary flex-shrink-0 shadow-sm border border-slate-100">
                     <value.icon size={28} />
                   </div>
                   <div>
                     <h3 className="text-xl font-serif font-bold text-advisor-dark mb-2">{value.title}</h3>
-                    <p className="text-advisor-dark/60 leading-relaxed">{value.desc}</p>
+                    <p className="text-slate-500 leading-relaxed text-sm">{value.desc}</p>
                   </div>
                 </motion.div>
               ))}

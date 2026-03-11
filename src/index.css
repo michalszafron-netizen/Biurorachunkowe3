@@ -5,17 +5,29 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
   
-  --color-warm-beige: #F5F2ED;
-  --color-broken-white: #FDFCFB;
-  --color-muted-orange: #D35400;
-  --color-soft-orange: #E67E22;
-  --color-advisor-dark: #2C3E50;
+  --color-brand-primary: #1E3A8A; /* Navy Blue */
+  --color-brand-secondary: #64748B; /* Slate */
+  --color-brand-accent: #0284C7; /* Sky Blue */
+  --color-brand-blue: #3B82F6; /* Blue 500 */
+  --color-brand-bg: #F8FAFC; /* Slate 50 */
+  --color-brand-paper: #FFFFFF;
+  
+  /* Mapping for existing components */
+  --color-warm-beige: #F1F5F9;
+  --color-broken-white: #FFFFFF;
+  --color-muted-orange: #1E3A8A;
+  --color-soft-orange: #2563EB;
+  --color-advisor-dark: #0F172A;
 }
 
 body {
-  @apply font-sans bg-broken-white text-advisor-dark;
+  @apply font-sans bg-brand-bg text-advisor-dark;
 }
 
 h1, h2, h3, h4, h5, h6 {
   @apply font-serif;
+}
+
+.selection-brand {
+  @apply selection:bg-blue-100 selection:text-brand-primary;
 }

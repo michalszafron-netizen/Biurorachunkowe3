@@ -37,13 +37,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="uslugi" className="py-24 bg-broken-white">
+    <section id="uslugi" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-advisor-dark mb-6">
-            Kompleksowe <span className="italic text-muted-orange">wsparcie</span> dla Twojej firmy
+            Kompleksowe <span className="italic text-brand-blue">wsparcie</span> dla Twojej firmy
           </h2>
-          <p className="text-lg text-advisor-dark/70">
+          <p className="text-lg text-slate-600">
             Oferujemy szeroki wachlarz usług księgowych i doradczych, dopasowanych do skali i potrzeb Twojego biznesu.
           </p>
         </div>
@@ -56,18 +56,18 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl border border-warm-beige transition-all duration-300 group"
+              className="bg-slate-50 p-10 rounded-2xl shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 rounded-2xl bg-warm-beige flex items-center justify-center text-soft-orange mb-8 group-hover:bg-soft-orange group-hover:text-white transition-all duration-300">
+              <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center text-brand-primary mb-8 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300 shadow-sm">
                 <service.icon size={32} />
               </div>
               <h3 className="text-2xl font-serif font-bold text-advisor-dark mb-4">{service.title}</h3>
-              <p className="text-advisor-dark/60 leading-relaxed mb-8">
+              <p className="text-slate-500 leading-relaxed mb-8 text-sm">
                 {service.desc}
               </p>
               <a
                 href="#kontakt"
-                className="inline-flex items-center text-sm font-bold text-muted-orange uppercase tracking-widest hover:text-soft-orange transition-colors"
+                className="inline-flex items-center text-xs font-bold text-brand-primary uppercase tracking-widest hover:text-brand-blue transition-colors"
               >
                 Dowiedz się więcej
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>

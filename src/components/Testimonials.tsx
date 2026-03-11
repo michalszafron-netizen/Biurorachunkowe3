@@ -25,19 +25,19 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-broken-white overflow-hidden">
+    <section className="py-24 bg-brand-bg overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-advisor-dark mb-6">
-              Co mówią nasi <span className="italic text-muted-orange">Klienci</span>
+              Co mówią nasi <span className="italic text-brand-blue">Klienci</span>
             </h2>
-            <p className="text-lg text-advisor-dark/70">
+            <p className="text-lg text-slate-600">
               Zaufanie buduje się latami. Jesteśmy dumni z opinii, które wystawiają nam nasi partnerzy biznesowi.
             </p>
           </div>
-          <div className="mt-8 md:mt-0 flex items-center space-x-4 bg-warm-beige px-6 py-4 rounded-2xl">
-            <div className="flex text-yellow-500">
+          <div className="mt-8 md:mt-0 flex items-center space-x-4 bg-white px-6 py-4 rounded-xl border border-slate-100 shadow-sm">
+            <div className="flex text-blue-500">
               {[...Array(5)].map((_, i) => <Star key={i} size={20} fill="currentColor" />)}
             </div>
             <span className="font-bold text-advisor-dark">4.9/5 na Google</span>
@@ -52,24 +52,24 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-warm-beige relative group hover:-translate-y-2 transition-all duration-300"
+              className="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 relative group hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="absolute top-8 right-8 text-soft-orange/10 group-hover:text-soft-orange/20 transition-colors">
+              <div className="absolute top-8 right-8 text-brand-primary/5 group-hover:text-brand-primary/10 transition-colors">
                 <Quote size={60} />
               </div>
-              <div className="flex text-yellow-500 mb-6">
+              <div className="flex text-blue-500 mb-6">
                 {[...Array(review.rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
               </div>
-              <p className="text-advisor-dark/80 italic mb-8 leading-relaxed relative z-10">
+              <p className="text-slate-600 italic mb-8 leading-relaxed relative z-10 text-sm">
                 "{review.text}"
               </p>
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-warm-beige rounded-full flex items-center justify-center text-muted-orange font-serif font-bold text-xl">
+                <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-brand-primary font-serif font-bold text-xl border border-slate-100">
                   {review.name.charAt(0)}
                 </div>
                 <div>
                   <p className="font-bold text-advisor-dark">{review.name}</p>
-                  <p className="text-xs text-advisor-dark/40 uppercase tracking-widest">{review.company}</p>
+                  <p className="text-[10px] text-slate-400 uppercase tracking-widest">{review.company}</p>
                 </div>
               </div>
             </motion.div>

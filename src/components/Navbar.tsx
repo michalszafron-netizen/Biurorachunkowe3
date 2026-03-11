@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-serif font-bold text-muted-orange tracking-tight">Twój Doradca</span>
+            <span className="text-2xl font-serif font-bold text-brand-primary tracking-tight">Twój Doradca</span>
           </div>
           
           {/* Desktop Menu */}
@@ -35,14 +35,14 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-advisor-dark hover:text-soft-orange transition-colors font-medium text-sm uppercase tracking-wider"
+                className="text-advisor-dark hover:text-brand-blue transition-colors font-medium text-sm uppercase tracking-wider"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="tel:+48123456789"
-              className="flex items-center space-x-2 bg-soft-orange text-white px-5 py-2 rounded-full hover:bg-muted-orange transition-colors shadow-md"
+              className="flex items-center space-x-2 bg-brand-primary text-white px-5 py-2 rounded hover:bg-brand-blue transition-colors shadow-sm"
             >
               <Phone size={16} />
               <span className="font-medium">Zadzwoń</span>
@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-advisor-dark hover:text-soft-orange transition-colors"
+              className="text-advisor-dark hover:text-brand-blue transition-colors"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -68,7 +68,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-broken-white border-b border-warm-beige"
+            className="md:hidden bg-white border-b border-slate-200"
           >
             <div className="px-4 pt-2 pb-6 space-y-1 sm:px-3">
               {navLinks.map((link) => (
@@ -76,14 +76,14 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-4 text-base font-medium text-advisor-dark hover:text-soft-orange hover:bg-warm-beige rounded-lg transition-all"
+                  className="block px-3 py-4 text-base font-medium text-advisor-dark hover:text-brand-blue hover:bg-slate-50 rounded-lg transition-all"
                 >
                   {link.name}
                 </a>
               ))}
               <a
                 href="tel:+48123456789"
-                className="flex items-center justify-center space-x-2 bg-soft-orange text-white px-5 py-3 rounded-full mt-4"
+                className="flex items-center justify-center space-x-2 bg-brand-primary text-white px-5 py-3 rounded-lg mt-4"
               >
                 <Phone size={18} />
                 <span className="font-medium">Zadzwoń do nas</span>
